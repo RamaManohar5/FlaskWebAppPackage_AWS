@@ -9,7 +9,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 5;
-    background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9)), url("../images/bg.jpg");
+    background-image: linear-gradient(rgba(0,8,51,0.4), rgba(0,8,51,0.4)), url("../images/bg1.jpg");
     background-position: center;
     background-size: cover;
     display: flex;

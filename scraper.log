@@ -1,47 +1,59 @@
-INFO:werkzeug:127.0.0.1 - - [15/Mar/2023 23:43:57] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Mar/2023 23:43:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Mar/2023 23:43:58] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
-ERROR:webAPI:Exception on /search [POST]
-Traceback (most recent call last):
-  File "c:\Users\ramam\Desktop\Flask_App\webAPI\views.py", line 46, in get_video_ids
-    response = urlopen(req)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 216, in urlopen
-    return opener.open(url, data, timeout)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 525, in open
-    response = meth(req, response)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 634, in http_response
-    response = self.parent.error(
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 563, in error
-    return self._call_chain(*args)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 496, in _call_chain
-    result = func(*args)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2800.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 643, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 400: Bad Request
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\Users\ramam\Desktop\Flask_App\webAPI\views.py", line 28, in get_content
-    get_csv_data = asyncio.run(fetch_channel_data(channel_url))
-  File "c:\Users\ramam\Desktop\Flask_App\webAPI\views.py", line 73, in fetch_channel_data
-    video_ids = get_video_ids(channel_url)
-  File "c:\Users\ramam\Desktop\Flask_App\webAPI\views.py", line 68, in get_video_ids
-    logging.INFO(e)
-TypeError: 'int' object is not callable
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\ramam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ramam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ramam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ramam\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "c:\Users\ramam\Desktop\Flask_App\webAPI\views.py", line 33, in get_content
-    logging.INFO(e)
-TypeError: 'int' object is not callable
-INFO:werkzeug:127.0.0.1 - - [15/Mar/2023 23:44:01] "[35m[1mPOST /search HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5555
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:14] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:15] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:18] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:40] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:44:40] "GET /static/images/bg.jpg HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5555
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:47:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:47:22] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:47:23] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:47:23] "[36mGET /static/images/bg.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5555
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 633-616-227
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:52:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:52:45] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:52:45] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:52:45] "[36mGET /static/images/bg.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:53:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:53:35] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:53:35] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:53:35] "[36mGET /static/images/bg.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:54:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:54:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:54:55] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:54:55] "[36mGET /static/images/bg.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:54:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:54:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:54:57] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:55:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:55:07] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:55:08] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:55:08] "GET /static/images/bg1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:56:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:56:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:56:44] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:56:44] "[36mGET /static/images/bg1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:56:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:56:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:56:48] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:57:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:57:55] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:57:56] "[36mGET /static/images/search.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [17/Mar/2023 10:57:56] "[36mGET /static/images/bg1.jpg HTTP/1.1[0m" 304 -
