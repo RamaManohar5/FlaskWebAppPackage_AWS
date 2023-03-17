@@ -13,16 +13,16 @@ import time
 from webAPI.key import key
 
 # Initialize the API component.
-application = Blueprint("views", __name__)
+views = Blueprint("views", __name__)
 
 
 # routes
-@application.route('/')
+@views.route('/')
 def base():
     return render_template('index.html')
 
 
-@application.route('/search', methods=['GET', 'POST'])
+@views.route('/search', methods=['GET', 'POST'])
 def get_content():
     if request.method == 'POST':
         try:

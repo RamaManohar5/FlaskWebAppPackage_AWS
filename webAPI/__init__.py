@@ -1,9 +1,9 @@
 from flask import Flask
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'api_key'
+application = Flask(__name__)
+application.config['SECRET_KEY'] = 'api_key'
 
-from .views import application
+from .views import views
 
 # register the resources of the API to the flask object
-app.register_blueprint(application, url_prefix= '/')
+application.register_blueprint(views, url_prefix= '/')
